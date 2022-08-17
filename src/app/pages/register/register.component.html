@@ -1,0 +1,28 @@
+
+<div class="c">
+    <form #f="ngForm" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="../assets/logo.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input [(ngModel)]="NewUser.name" type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="uname"><b>Email</b></label>
+          <input [(ngModel)]="NewUser.email" type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input [(ngModel)]="NewUser.password" type="password" placeholder="Enter Password" name="psw" required>
+              
+          <button type="submit"  [disabled]="!f.valid" (click) = "HandleRegister()" [ngClass]="{dis: !f.valid}">Register</button>
+          
+        </div>
+      
+        <div class="container login">
+            <span class="psw">Already have account? <a href="#/login">Login</a></span>
+            
+          
+        </div>
+      </form>
+    </div>

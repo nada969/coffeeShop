@@ -1,0 +1,36 @@
+
+
+.Flexcontainer {
+    display: flex;
+    margin: 50px;
+}
+.details {
+    margin-top: 5%;
+    width: 70%;
+}
+
+.imgContainer {
+    width: 30%;
+}
+
+img {
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+    .Flexcontainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        width: 100%;
+    }
+    .imgContainer {
+        width: 100%;
+    }
+    img {
+        width: 90%;
+    }
+    
+  }

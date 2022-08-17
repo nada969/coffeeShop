@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #8a5d34;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .info {
+    display: flex;
+    padding: 2px;
+    border: 1px;
+    border-color: rgb(136, 136, 136);
+    width: 300px;
+    border-style: solid;
+  }
+
+  .info p {
+    padding: 10px;
+  }
+
+  .info .price {
+    float: right;
+    margin-left: auto;
+  }
+
+  .total {
+    display: flex;
+  }
+
+  .total p {
+    margin-left: auto;
+    margin-top: 25px;
+  }
+
+  .dis {
+    opacity: 0.3;
+  }
+
+  .dis:hover {
+    opacity: 0.3;
+  }

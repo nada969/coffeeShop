@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="cartInfo">
+        <h1> Your Cart</h1>
+        <div class="info" *ngFor="let product of cart"> 
+            <p class="name"> {{product.name}} </p>
+            <p class="price"> {{product.price}} </p>
+            
+        </div>
+
+        <div class="total">
+            <h2>Total</h2>
+            <p>{{totalPrice}}</p>
+        </div>
+        
+        
+        <button (click) = placeOrder() [disabled]="cart.length == 0" [ngClass]="{dis: cart.length == 0}">Place Order</button>
+    </div>
+</div>
+

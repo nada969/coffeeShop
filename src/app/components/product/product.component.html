@@ -1,0 +1,12 @@
+
+
+<div class="card">
+    <img src="../assets/logo.png" alt="Coffee" style="width:70%">
+    <h1>{{myProduct.name}}</h1>
+    <p class="category" [ngStyle]="{color: myProduct.category_name == 'Hot' ? 'red' : 'blue'}">{{myProduct.category_name}}</p>
+    <p class="price">{{myProduct.price + "$"}}</p>
+    
+    <p><button (click) = addToCart(myProduct)>Add to Cart</button></p>
+</div>
+
+

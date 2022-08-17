@@ -1,0 +1,7 @@
+<div class="topnav menu" #myTopnav>
+  <a *ngFor="let i of menuData" [routerLink]="i.url"  [routerLinkActive]="['active']">{{i.title}}</a>
+  
+  <a href="#" class="icon" (click)="showHide(myTopnav)">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>

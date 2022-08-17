@@ -1,0 +1,77 @@
+form {border: 3px solid #f1f1f1; width: 40%;   border-radius: 30px;}
+
+.c{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;   
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #8a5d34;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.login {
+    text-align:  center;
+}
+
+.login a {
+    color: #8a5d34;
+    text-decoration: none;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+
+.dis {
+  opacity: 0.3;
+}
+
+.dis:hover {
+  opacity: 0.3;
+}

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "name": "Tony",
+      "email": "Tony@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "ahmed",
+      "email": "ahmed@yahoo.com",
+      "password": "123",
+      "id": 3
+    }
+  ],
+
+  "products": [
+    {
+    "id": 1,
+    "name": "black coffee",
+    "description": "hot black coffee",
+    "price": 25,
+    "image": "",
+    "category_name": "Hot"
+    },
+
+    {
+      "id": 2,
+      "name": "Tea",
+      "description": "hot red tea",
+      "price": 10,
+      "image": "",
+      "category_name": "Hot"
+      },
+
+      {
+        "id": 3,
+        "name": "Green Tea",
+        "description": "hotgreen tea",
+        "price": 30,
+        "image": "",
+        "category_name": "Cold"
+        },
+
+      {
+        "id": 4,
+        "name": "Late",
+        "description": "hot late",
+        "price": 45,
+        "image": "",
+        "category_name": "Hot"
+      }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
