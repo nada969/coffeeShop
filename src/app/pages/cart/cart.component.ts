@@ -10,7 +10,9 @@ import { Product } from '../product';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private _cart: CartService) { }
+  constructor(private _cart: CartService) {
+    this.cart = this._cart.getCartProducts();
+   }
 
   cart: datacontantI[] = [];
   totalPrice: number = 0;

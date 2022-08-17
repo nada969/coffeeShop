@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
       }, 
       
       error => {
+        alert("Email is already taken");
         console.log(error);
       });
 

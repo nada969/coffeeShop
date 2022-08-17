@@ -21,8 +21,7 @@ export class LoginComponent implements OnInit {
     password : ''
   };
   
-    //email :string = '';
-    //password:string =  '';
+
   
   
 
@@ -43,6 +42,7 @@ export class LoginComponent implements OnInit {
         }, 
         
         error => {
+          alert("Wrong email or password");
           console.log(error);
         });
     

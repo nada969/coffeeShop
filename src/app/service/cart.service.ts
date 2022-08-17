@@ -10,12 +10,15 @@ import { Product } from '../pages/product';
 export class CartService {
   private cartProducts : datacontantI[] = []; 
   private totalPrice: number = 0;
-  constructor() { }
+  constructor() { 
+    this.cartProducts = JSON.parse(localStorage.getItem("cart")|| '{}');
+  }
 
 
   addProduct(p: datacontantI) {
     this.cartProducts.push(p);
     this.totalPrice += p.price;
+    localStorage.setItem("cart", JSON.stringify(this.cartProducts));
   }
 
   getCartProducts(){
@@ -29,5 +32,6 @@ export class CartService {
   clearCart(){
     this.cartProducts=[];
     this.totalPrice = 0;
+    localStorage.setItem("cart", JSON.stringify(this.cartProducts));
   }
 }
