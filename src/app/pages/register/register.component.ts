@@ -27,9 +27,7 @@ export class RegisterComponent implements OnInit {
 
     let url = "https://shopping-app-bm.herokuapp.com/register/";
     
-    this._http.post(url, this.NewUser,{headers: new HttpHeaders({
-      'accept':'*/*'
-    })}).subscribe(
+    this._http.post(url, this.NewUser,{observe: 'response', responseType: 'text'}).subscribe(
       res => {
         console.log(res);
         this._router.navigate(['login']);

@@ -77,4 +77,23 @@
     list-style-type: none;
     margin: 0px;
     }}
+
+    button {
+      float: right;
+      color: #8a5d34;
+      text-align: center;
+      padding: 14px 16px;
+      margin: 5px 15px;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 30px;
+      border: 0px;
+      
+    }
+  
+    button:hover {
+      background-color: #8a5d34;
+      color: whitesmoke;
+      cursor: pointer;
+    }
     

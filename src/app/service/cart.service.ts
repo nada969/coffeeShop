@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { datacontantI } from '../components/product-list/pro-list';
 import { Product } from '../pages/product';
 
 @Injectable({
@@ -7,12 +8,12 @@ import { Product } from '../pages/product';
 
 
 export class CartService {
-  private cartProducts : Product[] = []; 
+  private cartProducts : datacontantI[] = []; 
   private totalPrice: number = 0;
   constructor() { }
 
 
-  addProduct(p: Product) {
+  addProduct(p: datacontantI) {
     this.cartProducts.push(p);
     this.totalPrice += p.price;
   }

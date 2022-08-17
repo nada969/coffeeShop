@@ -18,6 +18,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import {HttpClientModule} from "@angular/common/http";
 
 import {DialogModule} from 'primeng/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {DialogModule} from 'primeng/dialog';
     FormsModule,
     RouterModule,
     HttpClientModule,
-    DialogModule
+    DialogModule,
+    NgbModule
     
   ],
   providers: [],

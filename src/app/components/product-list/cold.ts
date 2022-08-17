@@ -1,4 +1,4 @@
-export interface datacontantI
+export interface cold
     {
         id?:	number;
         name	:string;

@@ -2,7 +2,10 @@ import { HttpClient } from '@angular/common/http';
 
 import { Component, OnInit } from '@angular/core';
 import { datacontantI } from './pro-list';
+import { cold } from './cold';
 import { CardsService } from '../../service/cards.service';
+import { CartService } from 'src/app/service/cart.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -11,18 +14,31 @@ import { CardsService } from '../../service/cards.service';
 })
 export class ProductListComponent implements OnInit {
 
-  dataI:datacontantI[]=[];  
+  dataI:datacontantI[]=[]; 
+  dataIcold:cold[]=[];  
 
-  constructor(private cardservice:CardsService){
-    this.cardservice.getData().subscribe((data) => {this.dataI=  data});
+  constructor(private cardservice:CardsService, private _cart: CartService, private router:Router){
+    this.cardservice.getDataHot().subscribe((data) => {this.dataI=  data});
+    this.cardservice.getDataCold().subscribe((data) => {this.dataIcold=  data});
+    console.log(this.dataI);
+    console.log(this.dataIcold);
 
+   
   }
 
   ngOnInit(): void {
     
   }
 
-  addToCart(){
+  addToCart(p: datacontantI){
 
+    this._cart.addProduct(p);
   }
+  
+
+  readMore(id: number){
+    
+    this.router.navigate(['/products', id]);
+  }
+  
 }

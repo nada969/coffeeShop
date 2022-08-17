@@ -1,7 +1,20 @@
-<div class="topnav menu" #myTopnav>
-  <a *ngFor="let i of menuData" [routerLink]="i.url"  [routerLinkActive]="['active']">{{i.title}}</a>
-  
-  <a href="#" class="icon" (click)="showHide(myTopnav)">
-      <i class="fa fa-bars"></i>
-    </a>
+<div>
+  <ul class="menu">
+    <li>
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+    </li>
+    
+    <li>
+      <a [routerLink]="['/cart']" [routerLinkActive]="['active']" badge="8">Cart</a>
+    </li>
+    
+    <li>
+      <a [routerLink]="['/profile']" [routerLinkActive]="['active']"> Profile</a>
+    </li>
+
+    <li>
+      <button type="submit" (click) = "signOut()">sign out</button>
+    </li>
+
+  </ul>
 </div>

@@ -1,18 +1,41 @@
 <div class="container">
+
     <div class="row">
-    <div *ngFor=" let i of dataI "  class="card col-lg-3 col-md-6 col-sm-12">
-        <div class="cardContent">
-            <div class="cardImage">
-                <img src="{{i.image}}">
-            </div>
-            <div class="cardText">
-                <h1>{{i.id}}</h1>
-                <span class="price">{{i.price}}</span>
-                <p>{{i.description}}</p>
-                <button (click)="addToCart()">Add to cart</button>
+        <h2>Hot Coffe</h2>
+        <div *ngFor=" let i of dataI "  class="card col-lg-4 col-md-6 col-sm-12">
+            <div class="cardContent">
+                <div class="cardImage">
+                    <img src="{{i.image}}">
+                </div>
+                <div class="cardText">
+                    <h1>{{i.name}}</h1>
+                    <span class="price">{{i.price}} $</span>
+                    <p>{{i.description}}</p>
+                    <a routerLink="['products', i.id]" >Read More</a>
+                    <button class="btn btn-outline-secondary" (click)="addToCart(i)">Add to cart</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <h2>Iced Coffe</h2>
+        <div *ngFor=" let x of dataIcold "  class="card col-lg-4 col-md-6 col-sm-12">
+            <div class="cardContent">
+                <div class="cardImage">
+                    <img src="{{x.image}}">
+                </div>
+                <div class="cardText">
+                    <h1>{{x.name}}</h1>
+                    <span class="price">{{x.price}} $</span>
+                    <p>{{x.description}}</p>
+                    <a routerLink="['products', i.id]" >Read More</a>
+                    <button class="btn btn-outline-secondary" (click)="addToCart(x)">Add to cart</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                </div>
+            </div>
+        </div>
 </div>
 
     <!-- <div  class="card col-lg-3 col-md-6 col-sm-12">
