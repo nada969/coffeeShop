@@ -1,0 +1,29 @@
+<div class="c">
+    <form #f="ngForm" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="../assets/logo.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label><b>product name</b></label>
+          <input [(ngModel)]="newProduct.name" type="text" placeholder="Enter product name" name="product name" required>
+
+          <label><b>description</b></label>
+          <input [(ngModel)]="newProduct.description" type="text" placeholder="Enter description" name="description" required>
+      
+          <label><b>price</b></label>
+          <input [(ngModel)]="newProduct.price" type="text" placeholder="Enter price" name="price" required>
+
+          <label><b>image</b></label>
+          <input [(ngModel)]="newProduct.image" type="text" placeholder="Enter image URL" name="img" required>
+
+          <label><b>category_name</b></label>
+          <input [(ngModel)]="newProduct.category_name" type="text" placeholder="Enter category name" name="cat" required>
+
+          <button type="submit"  [disabled]="!f.valid" (click) = "addProduct()" [ngClass]="{dis: !f.valid}">Add</button>
+          
+        </div>
+      
+        
+      </form>
+</div>

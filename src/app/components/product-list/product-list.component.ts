@@ -20,10 +20,8 @@ export class ProductListComponent implements OnInit {
   constructor(private cardservice:CardsService, private _cart: CartService, private router:Router){
     this.cardservice.getDataHot().subscribe((data) => {this.dataI=  data});
     this.cardservice.getDataCold().subscribe((data) => {this.dataIcold=  data});
-    console.log(this.dataI);
-    console.log(this.dataIcold);
-
-   
+ 
+  
   }
 
   ngOnInit(): void {
@@ -41,4 +39,15 @@ export class ProductListComponent implements OnInit {
     this.router.navigate(['/products', id]);
   }
   
+  
+  delete(p:number){ 
+    alert("Reload your Page");
+    this.cardservice.deleteData(p).subscribe(deleteData=>{
+     
+      this.dataI = deleteData;
+      this.dataIcold = deleteData;
+      
+    })
+  }
+
 }
